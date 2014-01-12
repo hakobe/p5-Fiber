@@ -1,0 +1,96 @@
+# carton snapshot format: version 1.0
+DISTRIBUTIONS
+  AnyEvent-7.07
+    pathname: M/ML/MLEHMANN/AnyEvent-7.07.tar.gz
+    provides:
+      AE undef
+      AE::Log::COLLECT undef
+      AE::Log::FILTER undef
+      AE::Log::LOG undef
+      AnyEvent 7.07
+      AnyEvent::Base 7.07
+      AnyEvent::CondVar 7.07
+      AnyEvent::CondVar::Base 7.07
+      AnyEvent::DNS undef
+      AnyEvent::Debug undef
+      AnyEvent::Debug::Backtrace undef
+      AnyEvent::Debug::Wrap undef
+      AnyEvent::Debug::Wrapped undef
+      AnyEvent::Debug::shell undef
+      AnyEvent::Handle undef
+      AnyEvent::IO undef
+      AnyEvent::IO::IOAIO undef
+      AnyEvent::IO::Perl undef
+      AnyEvent::Impl::Cocoa undef
+      AnyEvent::Impl::EV undef
+      AnyEvent::Impl::Event undef
+      AnyEvent::Impl::EventLib undef
+      AnyEvent::Impl::FLTK undef
+      AnyEvent::Impl::Glib undef
+      AnyEvent::Impl::IOAsync undef
+      AnyEvent::Impl::Irssi undef
+      AnyEvent::Impl::POE undef
+      AnyEvent::Impl::Perl undef
+      AnyEvent::Impl::Qt undef
+      AnyEvent::Impl::Qt::Io undef
+      AnyEvent::Impl::Qt::Timer undef
+      AnyEvent::Impl::Tk undef
+      AnyEvent::Log undef
+      AnyEvent::Log::COLLECT undef
+      AnyEvent::Log::Ctx undef
+      AnyEvent::Log::FILTER undef
+      AnyEvent::Log::LOG undef
+      AnyEvent::Loop undef
+      AnyEvent::Socket undef
+      AnyEvent::Strict undef
+      AnyEvent::TLS undef
+      AnyEvent::Util undef
+    requirements:
+      ExtUtils::MakeMaker 0
+  Coro-6.33
+    pathname: M/ML/MLEHMANN/Coro-6.33.tar.gz
+    provides:
+      Coro 6.33
+      Coro::AIO 6.33
+      Coro::AnyEvent 6.33
+      Coro::BDB 6.33
+      Coro::Channel 6.33
+      Coro::Debug 6.33
+      Coro::EV 6.33
+      Coro::Event 6.33
+      Coro::Handle 6.33
+      Coro::Handle::FH 6.33
+      Coro::LWP 6.33
+      Coro::LWP::Socket 6.33
+      Coro::MakeMaker 6.33
+      Coro::RWLock 6.33
+      Coro::Select 6.33
+      Coro::Semaphore 6.33
+      Coro::SemaphoreSet 6.33
+      Coro::Signal 6.33
+      Coro::Socket 6.33
+      Coro::Specific 6.33
+      Coro::State 6.33
+      Coro::Storable 6.33
+      Coro::Timer 6.33
+      Coro::Timer::Timeout 6.33
+      Coro::Util 6.33
+    requirements:
+      AnyEvent 5
+      ExtUtils::MakeMaker 0
+      Guard 0.5
+      Scalar::Util 0
+      Storable 2.15
+      common::sense 0
+  Guard-1.022
+    pathname: M/ML/MLEHMANN/Guard-1.022.tar.gz
+    provides:
+      Guard 1.022
+    requirements:
+      ExtUtils::MakeMaker 0
+  common-sense-3.72
+    pathname: M/ML/MLEHMANN/common-sense-3.72.tar.gz
+    provides:
+      common::sense 3.72
+    requirements:
+      ExtUtils::MakeMaker 0
