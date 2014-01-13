@@ -43,7 +43,7 @@ sub yield {
 
 sub resume {
     my $self = shift;
-    croak "FiberError" unless $self->{alive};
+    croak "dead fiber called" unless $self->{alive};
 
     @params = @_;
 
