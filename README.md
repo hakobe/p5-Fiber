@@ -1,6 +1,6 @@
 # NAME
 
-Fiber - Coroutine like Ruby 1.9 Fiber
+Fiber - Coroutine like Ruby Fiber
 
 # SYNOPSIS
 

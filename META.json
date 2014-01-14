@@ -1,5 +1,5 @@
 {
-   "abstract" : "Coroutine like Ruby 1.9 Fiber",
+   "abstract" : "Coroutine like Ruby Fiber",
    "author" : [
       "Yohei Fushii <hakobe@gmail.com>"
    ],
