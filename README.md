@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/hakobe/perl-fiber.png?branch=master)](https://travis-ci.org/hakobe/perl-fiber)
 # NAME
 
 Fiber - Coroutine like Ruby Fiber
