@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 use Carp qw(croak);
-use Coro::State;
+use Coro;
 
 our $VERSION = '0.01';
 
@@ -21,7 +21,7 @@ sub new {
         alive => 1,
     }, $class;
 
-    $self->{coro} = Coro::State->new(sub {
+    $self->{coro} = Coro->new(sub {
         $code->(@params);
 
         $self->{alive} = undef;
@@ -35,8 +35,8 @@ sub yield {
     my $class = shift;
     @returns = @_;
 
-    my ($coro, $prev) = @{ pop @yieldstack };
-    $coro->transfer($prev);
+    my $prev = pop @yieldstack;
+    $prev->schedule_to;
 
     return wantarray ? @params : $params[0];
 }
@@ -47,9 +47,9 @@ sub resume {
 
     @params = @_;
 
-    my $current = Coro::State->new;
-    push @yieldstack, [$self->{coro}, $current];
-    $current->transfer($self->{coro});
+    push @yieldstack, $Coro::current;
+    $self->{coro}->schedule_to;
+    $self->{coro}->cancel unless $self->{alive};
 
     return wantarray ? @returns : $returns[0];
 }
