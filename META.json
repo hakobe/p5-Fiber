@@ -55,13 +55,13 @@
    "release_status" : "unstable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/hakobe/perl-fiber/issues"
+         "web" : "https://github.com/hakobe/p5-Fiber/issues"
       },
-      "homepage" : "https://github.com/hakobe/perl-fiber",
+      "homepage" : "https://github.com/hakobe/p5-Fiber",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/hakobe/perl-fiber.git",
-         "web" : "https://github.com/hakobe/perl-fiber"
+         "url" : "git://github.com/hakobe/p5-Fiber.git",
+         "web" : "https://github.com/hakobe/p5-Fiber"
       }
    },
    "version" : "0.01"
