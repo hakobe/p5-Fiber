@@ -10,7 +10,7 @@ our $VERSION = '0.01';
 
 my @yieldstack;
 my @params;
-my $retval;
+my @returns;
 
 sub new {
     my $class = shift;
@@ -33,12 +33,12 @@ sub new {
 
 sub yield {
     my $class = shift;
-    $retval = shift;
+    @returns = @_;
 
     my ($coro, $prev) = @{ pop @yieldstack };
     $coro->transfer($prev);
 
-    return @params;
+    return wantarray ? @params : $params[0];
 }
 
 sub resume {
@@ -51,7 +51,7 @@ sub resume {
     push @yieldstack, [$self->{coro}, $current];
     $current->transfer($self->{coro});
 
-    return $retval;
+    return wantarray ? @returns : $returns[0];
 }
 
 1;
@@ -70,7 +70,8 @@ Fiber - Coroutine like Ruby Fiber
 
 =head1 DESCRIPTION
 
-Fiber is a coroutine implementaion like Ruby 1.9 Fiber.
+Fiber is a coroutine implementaion like Ruby Fiber.
+This module is built upon Coro.
 
 =head1 AUTHOR
 
