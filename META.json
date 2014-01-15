@@ -45,6 +45,11 @@
          "requires" : {
             "Coro" : "0"
          }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Fatal" : "0"
+         }
       }
    },
    "release_status" : "unstable",

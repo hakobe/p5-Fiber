@@ -8,7 +8,8 @@ Fiber - Coroutine like Ruby Fiber
 
 # DESCRIPTION
 
-Fiber is a coroutine implementaion like Ruby 1.9 Fiber.
+Fiber is a coroutine implementaion like Ruby Fiber.
+This module is built upon Coro.
 
 # AUTHOR
 
