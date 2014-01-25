@@ -68,10 +68,33 @@ Fiber - Coroutine like Ruby Fiber
 
   use Fiber;
 
+  my $counter = Fiber->new(sub {
+      my $n = 0;
+      while (1) {
+          Fiber->yield($n++);
+      }
+  });
+
+  $counter->resume; # => 0
+  $counter->resume; # => 1
+  $counter->resume; # => 2
+
 =head1 DESCRIPTION
 
 Fiber is a coroutine implementaion like Ruby Fiber.
 This module is built upon Coro.
+
+=head1 METHODS
+
+=over 4
+
+=item new
+
+  my $fiber = Fiber->new(sub { ... });
+
+  Creates a new Fiber object that processes a given subrotuine reference.
+
+=back
 
 =head1 AUTHOR
 
