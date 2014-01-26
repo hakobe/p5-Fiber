@@ -17,7 +17,7 @@ sub new {
     my $code  = shift;
 
     my $self = bless {
-        coro  => undef, 
+        coro  => undef,
         alive => 1,
     }, $class;
 
@@ -93,6 +93,12 @@ This module is built upon Coro.
   my $fiber = Fiber->new(sub { ... });
 
   Creates a new Fiber object that processes a given subrotuine reference.
+
+=item yield
+
+  my $ret = Fiber->yield(@vals);
+
+  Control back to the context that resume the fiber, and passing @valus to it.
 
 =back
 
