@@ -96,9 +96,16 @@ This module is built upon Coro.
 
 =item yield
 
-  my $ret = Fiber->yield(@vals);
+  my @ret = Fiber->yield(@vals);
 
   Control back to the context that resume the fiber, and passing @valus to it.
+
+=item resume
+
+  my @ret = $fiber->resume(@vals);
+
+  Resumes the fiber from the point at which the last Fiber->yield was called, 
+  or starts running it if it is the first call to resume.
 
 =back
 
