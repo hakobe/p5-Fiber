@@ -92,28 +92,26 @@ This module is built upon Coro.
 
   my $fiber = Fiber->new(sub { ... });
 
-  Creates a new Fiber object that processes a given subrotuine reference.
+Creates a new Fiber object that processes a given subrotuine reference.
 
 =item yield
 
   my @ret = Fiber->yield(@vals);
 
-  Control back to the context that resume the fiber, and passing @valus to it.
+Control back to the context that resume the fiber, and passing @valus to it.
 
 =item resume
 
   my @ret = $fiber->resume(@vals);
 
-  Resumes the fiber from the point at which the last Fiber->yield was called, 
-  or starts running it if it is the first call to resume.
+Resumes the fiber from the point at which the last Fiber->yield was called, 
+or starts running it if it is the first call to resume.
 
 =back
 
 =head1 AUTHOR
 
 Yohei Fushii E<lt>hakobe@gmail.comE<gt>
-
-=head1 SEE ALSO
 
 =head1 LICENSE
 
